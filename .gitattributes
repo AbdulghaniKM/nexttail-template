@@ -1,0 +1,11 @@
+# Oxfmt writes LF (`endOfLine: "lf"` in .oxfmtrc.json). Pin LF in the working
+# tree so a Windows clone doesn't check out CRLF and fail `pnpm format:check`.
+* text=auto eol=lf
+
+# Binary — never touch.
+*.ttf binary
+*.woff binary
+*.woff2 binary
+*.png binary
+*.jpg binary
+*.ico binary

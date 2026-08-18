@@ -1,0 +1,35 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript", "react", "unicorn", "oxc"],
+  "env": {
+    "builtin": true,
+    "browser": true
+  },
+  "ignorePatterns": [
+    ".next/**",
+    "out/**",
+    "node_modules/**",
+    "*.config.js",
+    "*.config.mjs",
+    "*.config.ts",
+    "next-env.d.ts",
+    "src/config/routes.gen.ts"
+  ],
+  "rules": {
+    "typescript/no-unused-vars": "off",
+    "typescript/no-explicit-any": "warn",
+    "no-console": "warn",
+    "no-debugger": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["scripts/**/*.mjs", "scripts/**/*.js", "scripts/**/*.ts"],
+      "env": {
+        "node": true
+      },
+      "rules": {
+        "no-console": "off"
+      }
+    }
+  ]
+}
